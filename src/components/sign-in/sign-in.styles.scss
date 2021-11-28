@@ -1,0 +1,25 @@
+.sign-in{
+  min-width: 300px;
+  width: 40%;
+  margin: 0 auto;
+
+  & h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    letter-spacing: .5rem;
+  }
+
+  & .sign-in-buttons{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+
+    & button{
+      &:first-child{
+        margin-left: 0;
+      }
+      margin-left: .8em;
+    }
+  }
+}
