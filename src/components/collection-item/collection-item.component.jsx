@@ -10,7 +10,7 @@ const CollectionItem = ({id, item, addItemToCard}) => (
     <div className="collection-item">
         <div className="image"
              style={{
-                 backgroundImage: `url(${item.imageURL})`
+                 backgroundImage: `url(${item.imageUrl})`
              }}
         />
         <div className="collection-footer">
