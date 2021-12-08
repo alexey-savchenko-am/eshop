@@ -1,9 +1,11 @@
 .cart-item{
   width: 100%;
   display: flex;
+  flex-direction: row;
   height: 80px;
   margin-bottom: 15px;
-
+  justify-content: flex-end;
+  align-items: flex-end;
   img{
     width: 30%;
   }

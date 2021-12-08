@@ -11,3 +11,12 @@ export const addItemToCard = (cartItems, cartItemToAdd) => {
 
     return [...cartItems, {...cartItemToAdd, quantity: 1}];
 };
+
+export const deleteItem = (cartItems, itemToRemove) => {
+
+    const cartItemIndex = cartItems.findIndex(cartItem => cartItem.id === itemToRemove.id);
+
+    if(cartItemIndex > -1){
+        return [...cartItems.slice(0, cartItemIndex), ...cartItems.slice(cartItemIndex + 1)];
+    }
+};
