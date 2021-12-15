@@ -1,2 +1,2 @@
 ## EShop
-React e-shop website sample project 
+React e-shop website sample project.
