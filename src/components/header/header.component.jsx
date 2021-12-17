@@ -25,14 +25,25 @@ const Header = ({currentUser, hidden, history}) => {
                 <Logo className="logo"/>
             </Link>
 
+            <div className="cart">
+                <CartIcon/>
+            </div>
+
+            <input type="checkbox" id="nav" style={{display:"none"}}/>
+            <label htmlFor="nav" className="nav-btn">
+                <i></i>
+                <i></i>
+                <i></i>
+            </label>
+
+
             <div className="options">
-                <nav>
+                <ul>
+
                     {
                         currentUser
-                            ? <div className="option profile-option" >
-
-                               {/* <FontAwesomeIcon  className="option-icon" title="profile" size="0x" icon={faUser} /> profile*/}
-                                <span className="option-icon">profile</span>
+                            ? <li className="option profile-option" >
+                                <span>profile</span>
                                 <div className="dropdown-wrapper">
                                     <ul className="dropdown">
                                         <li><a href="https://yogasid.com/profile/#profile">Settings</a></li>
@@ -43,22 +54,28 @@ const Header = ({currentUser, hidden, history}) => {
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
-                            : <Link to="/signin" className={`option ${path === "/signin" ? "active" : ""}`}>
-                                Sign In <FontAwesomeIcon  className="option-icon" title="profile" size="sm" icon={faSignInAlt} />
-                            </Link>
+                              </li>
+                            : <li className={`option ${path === "/signin" ? "active" : ""}`}>
+                                <Link to="/signin" >
+                                    Sign In <FontAwesomeIcon  className="option-icon" title="profile" size="sm" icon={faSignInAlt} />
+                                </Link>
+                              </li>
                     }
 
-                    <Link to="/shop" className={`option ${path === "/shop" ? "active" : ""}`}>
-                        SHOP
-                    </Link>
-                    <Link to="/contact" className={`option ${path === "/contact" ? "active" : ""}`}>
-                        CONTACT
-                    </Link>
-                    <div className="option">
-                        <CartIcon/>
-                    </div>
-                </nav>
+                    <li className={`option ${path === "/shop" ? "active" : ""}`}>
+                        <Link to="/shop" >
+                            SHOP
+                        </Link>
+                    </li>
+
+                    <li className={`option ${path === "/contact" ? "active" : ""}`}>
+                        <Link to="/contact">
+                            CONTACT
+                        </Link>
+                    </li>
+
+
+                </ul>
             </div>
             {
                 hidden ? null :

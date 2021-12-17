@@ -2,20 +2,19 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  height: 80px;
-  margin-bottom: 15px;
+  margin-bottom: .5em;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   img{
-    width: 30%;
+    width: 20%;
   }
 
   .item-details{
-    width: 70%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 10px 20px;
+    padding: 0 20px;
   }
 }

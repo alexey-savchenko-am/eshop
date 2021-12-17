@@ -12,7 +12,6 @@
   z-index: 5;
 
   .cart-items{
-    height: 240px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -24,5 +23,12 @@
   }
   button{
     margin-top: auto;
+  }
+}
+
+@media screen and (max-width: 864px) {
+  .cart-dropdown{
+    width: 100%;
+    border: none;
   }
 }
