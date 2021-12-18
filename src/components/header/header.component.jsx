@@ -46,9 +46,6 @@ const Header = ({currentUser, hidden, history}) => {
                                 <span>profile</span>
                                 <div className="dropdown-wrapper">
                                     <ul className="dropdown">
-                                        <li><a href="https://yogasid.com/profile/#profile">Settings</a></li>
-                                        <li><a href="https://yogasid.com/profile/#subscription">Subscription</a></li>
-                                        <li><a href="https://yogasid.com/profile/#questions">Questions</a></li>
                                         <li className="last-child" onClick={() => auth.signOut()}>
                                             Sign Out <FontAwesomeIcon  className="option-icon" title="profile" size="sm" icon={faSignOutAlt} />
                                         </li>
