@@ -1,0 +1,28 @@
+.category{
+  display: flex;
+  flex-direction: column;
+
+  .title{
+    font-size: 2rem;
+    margin: 0 auto 30px;
+  }
+
+  .items{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    & .collection-item{
+      margin-bottom: 30px;
+    }
+  }
+}
+
+
+@media screen and (max-width: 864px) {
+  .items{
+    flex-direction: column;
+    justify-content: center;
+  }
+}
