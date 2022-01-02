@@ -7,8 +7,13 @@ export const selectShopItems = createSelector(
     shop => shop.shopItems
 );
 
-export const selectShopItemsByCategory = category =>
-    createSelector(
+export const selectShopItemsForPreview = createSelector(
     [selectShopItems],
-    shopItems => shopItems.find(i => i.routeName === category)
+    shopItems => Object.keys(shopItems).map(key => shopItems[key])
 );
+
+export const selectShopItemsByCategory = category => {
+    return createSelector(
+        [selectShopItems],
+        shopItems => shopItems[category]);
+};

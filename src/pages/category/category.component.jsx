@@ -6,6 +6,7 @@ import './category.styles.scss';
 
 const CategoryPage = ({collection}) => {
 
+    console.log(collection);
     if(!collection)
         return (<p>No such category!</p>);
     const {title, items } = collection;
