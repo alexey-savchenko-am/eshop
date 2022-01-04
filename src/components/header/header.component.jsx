@@ -25,9 +25,7 @@ const Header = ({currentUser, hidden, history}) => {
                 <Logo className="logo"/>
             </Link>
 
-            <div className="cart">
-                <CartIcon/>
-            </div>
+
 
             <input type="checkbox" id="nav" style={{display:"none"}}/>
             <label htmlFor="nav" className="nav-btn">
@@ -73,6 +71,10 @@ const Header = ({currentUser, hidden, history}) => {
 
 
                 </ul>
+            </div>
+
+            <div className="cart">
+                <CartIcon/>
             </div>
             {
                 hidden ? null :

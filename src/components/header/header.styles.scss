@@ -3,7 +3,7 @@ $white: white;
 .header{
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin-bottom: 1.7em;
   box-shadow: 0 0 20px rgba(157, 167, 177, 0.24);
   padding: 1em;
@@ -14,7 +14,9 @@ $white: white;
 
   .logo-container{
     height: 100%;
-    position: relative;
+    position: absolute;
+    top:10px;
+    left: 10px;
     .logo{
       position: absolute;
       top:9px
@@ -22,12 +24,10 @@ $white: white;
   }
 
   .cart{
-    margin-left: auto;
-    padding-top: .4em;
+    padding-top: .3em;
   }
 
   .options{
-    justify-content: flex-end;
     display: flex;
     .option{
 
